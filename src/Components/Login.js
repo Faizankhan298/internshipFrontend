@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Axios from "axios";
+import axios from "axios";
 import styles from "./Login.module.css";
 
 export default function Login() {
@@ -8,14 +8,14 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  Axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {
       setError("Please fill all the fields");
       return;
     }
-    Axios.post("https://internshipbackend-pgyg.onrender.com/auth/login", {
+    axios.post("https://internshipbackend-pgyg.onrender.com/auth/login", {
       email,
       password,
     })
