@@ -6,18 +6,20 @@ export default function Dashboard() {
   const [appliedOppurtunites, setAppliedOppurtunities] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get("http://localhost:3000/auth/verify").then((res) => {
-      if (!res.data.status) {
-        navigate("/login");
-      } else {
-        fetchAppliedOppurtunities();
-      }
-    });
+    axios
+      .get("https://internshipbackend-pgyg.onrender.com/auth/verify")
+      .then((res) => {
+        if (!res.data.status) {
+          navigate("/login");
+        } else {
+          fetchAppliedOppurtunities();
+        }
+      });
   }, [navigate]);
   const fetchAppliedOppurtunities = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/auth/applied-oppurtunities"
+        "https://internshipbackend-pgyg.onrender.com/auth/applied-oppurtunities"
       );
       setAppliedOppurtunities(response.data);
     } catch (error) {
@@ -26,7 +28,7 @@ export default function Dashboard() {
   };
   const handleLogout = () => {
     axios
-      .get("http://localhost:3000/auth/logout")
+      .get("https://internshipbackend-pgyg.onrender.com/auth/logout")
       .then((res) => {
         if (res.data.status) {
           navigate("/login");

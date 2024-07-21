@@ -15,7 +15,7 @@ export default function Login() {
       setError("Please fill all the fields");
       return;
     }
-    Axios.post("http://localhost:3000/auth/login", {
+    Axios.post("https://internshipbackend-pgyg.onrender.com/auth/login", {
       email,
       password,
     })

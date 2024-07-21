@@ -12,7 +12,7 @@ export default function OppurtunitiesComponent() {
   const fetchAppliedOppurtunities = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/auth/applied-oppurtunities"
+        "https://internshipbackend-pgyg.onrender.com/auth/applied-oppurtunities"
       );
       setAppliedOppurtunities(response.data);
     } catch (error) {
@@ -57,7 +57,9 @@ const OppurtunityCard = ({ oppurtunity, appliedOppurtunities }) => {
   const applyForOppurtunity = (oppurtunity) => {
     try {
       axios
-        .post("http://localhost:3000/auth/apply", { oppurtunity })
+        .post("https://internshipbackend-pgyg.onrender.com/auth/apply", {
+          oppurtunity,
+        })
         .then((res) => {
           console.log(res);
         });
