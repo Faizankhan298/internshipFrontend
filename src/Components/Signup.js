@@ -15,7 +15,7 @@ export default function Signup() {
       setError("Please fill all fields");
       return;
     }
-    Axios.post("https://internshipbackend-pgyg.onrender.com/auth/signup", {
+    axios.post("https://internshipbackend-pgyg.onrender.com/auth/signup", {
       username,
       email,
       password,
