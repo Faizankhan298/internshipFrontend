@@ -71,7 +71,7 @@ export default function Signup() {
             </div>
             <button type="submit">SignUp</button>
             <div>
-              <p>Already have an accoun?</p>
+              <p>Already have an account?</p>
               <button onClick={() => navigate("/login")}>Login</button>
             </div>
             {error && <p>{error}</p>}
