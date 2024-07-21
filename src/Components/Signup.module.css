@@ -1,0 +1,76 @@
+/* Signup.module.css */
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9f9b9b;
+}
+
+.signupBox {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.signupBox h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.signupBox form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.signupBox label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.signupBox input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signupBox button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signupBox button:hover {
+  background-color: #555;
+}
+
+.signupBox .error {
+  color: red;
+  margin-top: 10px;
+}
+
+.signupBox .navigate {
+  margin-top: 10px;
+}
+
+.signupBox .navigate button {
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
